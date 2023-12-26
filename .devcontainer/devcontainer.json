@@ -1,0 +1,11 @@
+{
+  "name": "My Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "my-dev-container",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "settings": { 
+      "terminal.integrated.shell.linux": "/bin/bash"
+    }
+  }
+}
