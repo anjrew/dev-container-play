@@ -1,20 +1,6 @@
-# Use an official Python runtime as a parent image
-FROM python:3.8-slim
+# Note: You can use any Debian/Ubuntu based image you want. 
+FROM mcr.microsoft.com/devcontainers/base:bullseye
 
-# Set the working directory in the container
-WORKDIR /workspace
-
-# Copy the current directory contents into the container at /workspace
-COPY . /workspace
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# [Optional] Uncomment this section to install additional OS packages.
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#     && apt-get -y install --no-install-recommends <your-package-list-here>
